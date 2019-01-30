@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SimpleAudioPlayer</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="just_now">Just now</string>
+    <plurals name="min_count_string">
+        <item quantity="one">%d min ago</item>
+        <item quantity="other">%d mins ago</item>
+    </plurals>
+
+    <plurals name="hour_count_string">
+        <item quantity="one">%d hour ago</item>
+        <item quantity="other">%d hours ago</item>
+    </plurals>
+</resources>
