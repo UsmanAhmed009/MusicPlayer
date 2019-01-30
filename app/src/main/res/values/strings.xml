@@ -5,6 +5,12 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
     <string name="just_now">Just now</string>
+    <string name="open_settings">OPEN SETTING</string>
+    <string name="permission_required_title">Permission required</string>
+    <string name="files_permission_message">Please provide permission to access files</string>
+    <string name="no_audio_files_present_in_your_device">No audio files present in your device</string>
+    <string name="can_t_find_your_file">Can\'t find your file</string>
+    <string name="click_here_to_see_all_files">Click here to see all files</string>
     <plurals name="min_count_string">
         <item quantity="one">%d min ago</item>
         <item quantity="other">%d mins ago</item>
