@@ -1,4 +1,4 @@
-package com.sillylife.simpleaudioplayer;
+package musicplayer.cs371m.musicplayer;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

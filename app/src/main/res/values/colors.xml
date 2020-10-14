@@ -8,4 +8,9 @@
     <color name="black">#000000</color>
     <color name="seperator">#eaeaea</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="gray">#BFBABA</color>
+    <color name="light_gray">#E4E9F2</color>
+    <color name="red">#D11616</color>
+
 </resources>

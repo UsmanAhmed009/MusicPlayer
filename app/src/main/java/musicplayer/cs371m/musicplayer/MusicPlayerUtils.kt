@@ -1,10 +1,10 @@
-package com.sillylife.simpleaudioplayer
+package musicplayer.cs371m.musicplayer
 
 import android.content.Context
 import java.text.DateFormatSymbols
 import java.util.*
 
-object MediaPlayerUtils {
+object MusicPlayerUtils {
 
     /**
      * Function to convert milliseconds time to

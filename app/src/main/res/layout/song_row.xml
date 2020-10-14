@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="16dp"
+    android:id="@+id/song_layout"
     android:paddingTop="8dp">
 
     <RelativeLayout
@@ -31,6 +32,7 @@
 
             <TextView
                 android:id="@+id/location"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -47,7 +49,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:background="?attr/selectableItemBackground"
@@ -56,8 +58,27 @@
             <android.support.v7.widget.AppCompatImageView
                 android:id="@+id/play"
                 android:layout_width="30dp"
+                android:visibility="gone"
                 android:layout_height="30dp"
                 app:srcCompat="@drawable/ic_play_arrow_black" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="30:39" />
+
         </LinearLayout>
 
     </RelativeLayout>
@@ -71,6 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
+            android:visibility="gone"
             android:layout_marginEnd="65dp"
             android:layout_marginRight="65dp"
             android:singleLine="true"
@@ -78,30 +100,11 @@
             android:textColor="?android:attr/textColorSecondary"
             tools:text="Shyari with Piya" />
 
-
-        <TextView
-            android:id="@+id/duration"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:gravity="center_horizontal"
-            android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="?android:attr/textColorSecondary"
-            tools:text="30:39" />
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
         android:background="@color/seperator" />
 </LinearLayout>

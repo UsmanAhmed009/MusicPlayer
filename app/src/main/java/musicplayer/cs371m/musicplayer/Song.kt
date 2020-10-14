@@ -1,9 +1,9 @@
-package com.sillylife.simpleaudioplayer
+package musicplayer.cs371m.musicplayer
 
 import android.os.Parcel
 import android.os.Parcelable
 
-class LocalAudio : Parcelable {
+class Song : Parcelable {
 
     var audioId: Long = 0
     var audioTitle: String? = null
@@ -49,12 +49,12 @@ class LocalAudio : Parcelable {
         dest.writeByte((if (isHighlight) 1 else 0).toByte())
     }
 
-    companion object CREATOR : Parcelable.Creator<LocalAudio> {
-        override fun createFromParcel(parcel: Parcel): LocalAudio {
-            return LocalAudio(parcel)
+    companion object CREATOR : Parcelable.Creator<Song> {
+        override fun createFromParcel(parcel: Parcel): Song {
+            return Song(parcel)
         }
 
-        override fun newArray(size: Int): Array<LocalAudio?> {
+        override fun newArray(size: Int): Array<Song?> {
             return arrayOfNulls(size)
         }
     }

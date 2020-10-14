@@ -1,4 +1,4 @@
-package com.sillylife.simpleaudioplayer
+package musicplayer.cs371m.musicplayer
 
 import android.Manifest
 import android.content.DialogInterface
@@ -9,6 +9,8 @@ import android.provider.Settings
 import android.support.v4.app.FragmentManager
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fullscreen)
+        setContentView(R.layout.activity_main)
 
         mFragmentManager = supportFragmentManager
 
@@ -45,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAudioPicker() {
         val fragmentTransaction = mFragmentManager!!.beginTransaction()
-        fragmentTransaction.replace(R.id.container, LocalAudioPickerFragment.newInstance())
+        fragmentTransaction.replace(R.id.container, MainContentFragment.newInstance())
         fragmentTransaction.commitAllowingStateLoss()
     }
 
@@ -64,5 +66,19 @@ class MainActivity : AppCompatActivity() {
             }
         })
         builder.show()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.action_settings -> {
+            // do stuff
+            startActivity(Intent(this, SettingsActivity::class.java))
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 }
